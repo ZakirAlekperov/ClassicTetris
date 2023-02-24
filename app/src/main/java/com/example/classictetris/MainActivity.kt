@@ -4,9 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.TextView
 import com.example.classictetris.databinding.ActivityMainBinding
+import com.example.classictetris.storage.AppPreferences
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,10 +17,20 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         binding.btnNewGame.setOnClickListener(this::onBtnNewGameClick)
+        binding.btnResetScore.setOnClickListener(this::onBtnResetScoreClick)
+        binding.btnExit.setOnClickListener(this::onBtnExitClick)
     }
 
     private fun onBtnNewGameClick(view: View){
         val intent = Intent(this, GameActivity::class.java)
         startActivity(intent)
+    }
+
+    private fun onBtnResetScoreClick(view: View){
+        val preferences = AppPreferences(this)
+        preferences.clearHighScore()
+    }
+    private fun onBtnExitClick(view: View){
+        System.exit(0)
     }
 }
