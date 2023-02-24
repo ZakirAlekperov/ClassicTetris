@@ -18,19 +18,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TETRIS"
-            android:textSize="80sp"/>
+            android:text="@string/tetris"
+            android:textAllCaps="true"
+            android:textSize="80sp" />
 
         <TextView
             android:id="@+id/tv_high_score"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="High score: 0"
+            android:text="@string/high_score_default"
             android:textSize="20sp"
             android:layout_marginTop="@dimen/layout_margin_top"/>
 
@@ -38,25 +40,26 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
 
             <Button
                 android:id="@+id/btn_new_game"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New game" />
+                android:text="@string/new_game" />
 
             <Button
                 android:id="@+id/btn_reset_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Reset score" />
+                android:text="@string/reset_score" />
 
             <Button
                 android:id="@+id/btn_exit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Exit" />
+                android:text="@string/exit" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
