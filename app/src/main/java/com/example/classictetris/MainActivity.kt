@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.classictetris.databinding.ActivityMainBinding
 import com.example.classictetris.storage.AppPreferences
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,8 +30,16 @@ class MainActivity : AppCompatActivity() {
     private fun onBtnResetScoreClick(view: View){
         val preferences = AppPreferences(this)
         preferences.clearHighScore()
+        Snackbar.make(view, "Score successfully reset", Snackbar.LENGTH_SHORT).show()
+        setTvHighScoreText(preferences.getHighScore())
     }
     private fun onBtnExitClick(view: View){
         System.exit(0)
     }
+
+    private fun setTvHighScoreText(score: Int){
+        val text = "High score: $score"
+        binding.tvHighScore.text = text
+    }
+
 }
