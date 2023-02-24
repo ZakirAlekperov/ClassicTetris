@@ -3,6 +3,7 @@ package com.example.classictetris
 import android.os.Binder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.classictetris.databinding.ActivityGameBinding
 import com.example.classictetris.storage.AppPreferences
 
@@ -23,6 +24,6 @@ class GameActivity : AppCompatActivity() {
         binding.tvHighScore.text = "${appPreferences.getHighScore()}"
     }
     private fun updateCurrentScore(){
-        binding.tvHighScore.text="0"
+        binding.tvCurrentScore.text="0"
     }
 }
