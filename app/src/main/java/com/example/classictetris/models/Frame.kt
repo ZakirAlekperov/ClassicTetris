@@ -3,8 +3,8 @@ package com.example.classictetris.models
 import com.example.classictetris.helper.HelperFunctions
 
 class Frame(private val width: Int) {
-    val helperFunctions = HelperFunctions()
-    val data:ArrayList<ByteArray> = ArrayList()
+    private val helperFunctions = HelperFunctions()
+    private val data:ArrayList<ByteArray> = ArrayList()
 
     fun addRow(byteString: String):Frame{
         val row = ByteArray(byteString.length)
