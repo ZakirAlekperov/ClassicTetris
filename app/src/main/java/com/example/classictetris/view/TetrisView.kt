@@ -12,7 +12,7 @@ class TetrisView:View {
     private val paint = Paint()
     private var lastMove:Long = 0
     private var model:AppModel? = null
-    private var activity: GameActivity? = null
+    var activity: GameActivity? = null
     private val viewHandler = ViewHandler(this)
     private var cellSize:Dimension = Dimension(0, 0)
     private var frameOffset:Dimension = Dimension(0,0)
