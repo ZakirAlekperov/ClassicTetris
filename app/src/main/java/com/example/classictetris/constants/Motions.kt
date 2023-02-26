@@ -1,4 +1,4 @@
-package com.example.classictetris.models
+package com.example.classictetris.constants
 
 enum class Motions {
     LEFT,
